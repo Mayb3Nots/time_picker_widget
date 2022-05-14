@@ -875,7 +875,7 @@ class _DialPainter extends CustomPainter {
     required this.theta,
     required this.textDirection,
     required this.selectedValue,
-  }) : super(repaint: PaintingBinding.instance!.systemFonts);
+  }) : super(repaint: PaintingBinding.instance.systemFonts);
 
   final List<_TappableLabel>? primaryLabels;
   final List<_TappableLabel>? secondaryLabels;
@@ -992,7 +992,7 @@ class _DialState extends State<_Dial> with SingleTickerProviderStateMixin {
     _theta = _thetaController!
         .drive(CurveTween(curve: Curves.easeIn))
         .drive(_thetaTween!)
-          ..addListener(() => setState(() {/* _theta.value has changed */}));
+      ..addListener(() => setState(() {/* _theta.value has changed */}));
   }
 
   late ThemeData themeData;
